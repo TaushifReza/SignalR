@@ -1,0 +1,73 @@
+﻿@*<div class="container">
+    <div class="row">
+        <div class="col-3"> Total Views: </div>
+        <div class="col-4">
+            <span id="totalViewsCounter"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3"> Total Connection/Users: </div>
+        <div class="col-4">
+            <span id="totalUsersCounter"></span>
+        </div>
+    </div>
+</div>*@
+
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow border-0">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">Real-time Statistics</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card mb-3 h-100">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-secondary">Total Views</h5>
+                                    <h2 class="display-4 fw-bold text-primary" id="totalViewsCounter">0</h2>
+                                    <p class="card-text"><small class="text-muted">Lifetime page views</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card mb-3 h-100">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-secondary">Active Users</h5>
+                                    <h2 class="display-4 fw-bold text-success" id="totalUsersCounter">0</h2>
+                                    <p class="card-text"><small class="text-muted">Current connections</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-12">
+                            <div class="alert alert-info mb-0 d-flex align-items-center" role="alert">
+                                <div class="d-flex align-items-center me-2">
+                                    <div class="spinner-grow spinner-grow-sm me-2" role="status" id="connectionIndicator"></div>
+                                    <span id="connectionStatus">Connected</span>
+                                </div>
+                                <div class="ms-auto">
+                                    <button class="btn btn-sm btn-outline-primary" id="refreshButton">
+                                        <span class="d-flex align-items-center">
+                                            <span class="me-1">Refresh</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z" />
+                                                <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/signalr.js"></script>
+<script src="~/js/userCount.js"></script>
