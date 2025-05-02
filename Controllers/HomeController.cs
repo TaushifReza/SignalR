@@ -42,7 +42,7 @@ namespace SignalR.Controllers
             return RedirectToAction(nameof(Voting));
         }
 
-        public IActionResult Privacy()
+        public IActionResult Subscriber()
         {
             return View();
         }
