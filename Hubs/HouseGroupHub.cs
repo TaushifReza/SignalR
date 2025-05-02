@@ -47,5 +47,10 @@ namespace SignalR.Hubs
                 await Groups.RemoveFromGroupAsync(Context.ConnectionId, houseName);
             }
         }
+
+        public async Task TriggerHouseNotify(string houseName)
+        {
+            await Clients.Groups(houseName).SendAsync("triggerHouseNotification", houseName);
+        }
     }
 }
